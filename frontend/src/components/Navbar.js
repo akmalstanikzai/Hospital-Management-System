@@ -21,6 +21,8 @@ const Navbar = () => {
             <div>
               <Link to="/articles" className="nav-item">Articles</Link>
               <Link to="/doctor" className="nav-item">Doctors</Link>
+              <Link to="/appointmentbooking" className="nav-item">Appointment Bookings</Link>
+              <Link to="/requests" className="nav-item">Requests</Link>
               <span>{user.email}</span>
               <button onClick={handleClick}>Log out</button>
               

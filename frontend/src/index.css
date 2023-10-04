@@ -252,7 +252,7 @@ nav button {
 
 .doc-det{
   flex: 1; /* Take remaining space */
-  background-color: #f0f0f0;
+  background-color: #fff;
   padding: 10px;
 }
 
@@ -272,4 +272,78 @@ nav button {
   font-size: 100px; /* Set the font-size to fill the div container */
   color: #fff; /* Set icon color (white in this example) */
   /* Additional styles for the material symbol outlined (if needed) */
+}
+
+.form-container{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.big-textarea {
+  width: 100%; /* Adjust the width to take up the full available width */
+  height: 100px; /* Set the height to your desired value */
+  /* Other styling properties if needed */
+}
+
+.req-button {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.appointment-details {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.appointment-details h4 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.appointment-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.appointment-details .buttons {
+  display: flex;
+  margin: 0 auto;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.appointment-details .buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.appointment-details .buttons button.accept {
+  background-color: rgb(2, 202, 2);
+  color: white;
+}
+
+.appointment-details .buttons button.decline {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.dec-btn{
+  background-color: rgb(255, 0, 0);
+  display: inline-block;
+  margin: 0 auto;
 }

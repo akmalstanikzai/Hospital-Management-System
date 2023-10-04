@@ -6,10 +6,13 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Articles from './pages/Articles';
+import Articles from './pages/Articles'
 import Doctor from './pages/Doctors'
+import Appointments from './pages/AppointmentBooking'
+import Requests from './pages/Requests'
 import { ArticlesContextProvider } from './context/ArticlesContext';
 import { DoctorsContextProvider } from './context/DoctorsContext'
+import { AppointmentsContextProvider } from './context/AppointmentContext'
 
 
 function App() {
@@ -45,7 +48,26 @@ function App() {
                 <DoctorsContextProvider>
                   <Doctor />
                 </DoctorsContextProvider>
-                : <Navigate to="/login" />}
+                : <Navigate to="/login" />
+              }
+            />
+            <Route
+              path="/appointmentbooking"
+              element = {user ?
+                <AppointmentsContextProvider>
+                  <Appointments />
+                </AppointmentsContextProvider> 
+                : <Navigate to="/login" />
+              }
+            />
+            <Route
+              path="/requests"
+              element = {user ?
+                <AppointmentsContextProvider>
+                  <Requests />
+                </AppointmentsContextProvider> 
+                : <Navigate to="/login" />
+              }
             />
             <Route 
               path="/login" 
