@@ -14,15 +14,18 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
-          <h1>HMS</h1>
+          <h2>HMS</h2>
         </Link>
         <nav>
           {user && (
-            <div>
-              <Link to="/articles" className="nav-item">Articles</Link>
-              <Link to="/doctor" className="nav-item">Doctors</Link>
-              <Link to="/appointmentbooking" className="nav-item">Appointment Bookings</Link>
-              <Link to="/requests" className="nav-item">Requests</Link>
+            <div className="navbar-div">
+              <div className="navbar-divv">
+                <Link to="/articles" className="nav-item">Articles</Link>
+                <Link to="/doctor" className="nav-item">Doctors</Link>
+                <Link to="/appointmentbooking" className="nav-item">Booking</Link>
+                <Link to="/requests" className="nav-item">Requests</Link>
+                <Link to="/meetings" className="nav-item">Meetings</Link>
+              </div>      
               <span>{user.email}</span>
               <button onClick={handleClick}>Log out</button>
               

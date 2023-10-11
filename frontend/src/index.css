@@ -347,3 +347,63 @@ nav button {
   display: inline-block;
   margin: 0 auto;
 }
+
+/* Styles for MeetingsDetails component */
+.meetings-details {
+  width: 65%;
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.meetings-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.meetings-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.meetings-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.navbar-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Equal space between items */
+  padding: 10px;
+}
+
+.navbar-divv{
+  width: 80%;
+}
+
+/* styles.css */
+
+/* Set height and width of the image to fill the viewport */
+.full-page-image {
+  height: 100vh; /* 100% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.full-page-image img {
+  width: 100%; /* Set image width to 100% */
+  height: 100%; /* Set image height to 100% */
+  object-fit: contain; /* Maintain aspect ratio and fit within container */
+}

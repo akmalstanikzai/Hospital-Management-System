@@ -10,6 +10,7 @@ import Articles from './pages/Articles'
 import Doctor from './pages/Doctors'
 import Appointments from './pages/AppointmentBooking'
 import Requests from './pages/Requests'
+import Meetings from './pages/Meetings'
 import { ArticlesContextProvider } from './context/ArticlesContext';
 import { DoctorsContextProvider } from './context/DoctorsContext'
 import { AppointmentsContextProvider } from './context/AppointmentContext'
@@ -65,6 +66,15 @@ function App() {
               element = {user ?
                 <AppointmentsContextProvider>
                   <Requests />
+                </AppointmentsContextProvider> 
+                : <Navigate to="/login" />
+              }
+            />
+            <Route
+              path="/meetings"
+              element = {user ?
+                <AppointmentsContextProvider>
+                  <Meetings />
                 </AppointmentsContextProvider> 
                 : <Navigate to="/login" />
               }
