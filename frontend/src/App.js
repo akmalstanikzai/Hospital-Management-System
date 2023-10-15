@@ -27,9 +27,11 @@ function App() {
             <Route        
               path="/articles" 
               element={
-                <ArticlesContextProvider>
-                  <Articles />
-                </ArticlesContextProvider>
+                user ?
+                  <ArticlesContextProvider>
+                    <Articles />
+                  </ArticlesContextProvider>
+                : <Navigate to="/login" />
               } 
             />
             <Route 

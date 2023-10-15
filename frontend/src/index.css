@@ -193,3 +193,20 @@ nav button {
   font-size: 1em;
   margin-left: 10px;
 }
+
+.nav-item{
+  margin-right: 100px;
+  color: var(--primary);
+  font-family: "Poppins";
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dashboard{
+  display: flex;
+  justify-content: space-between; /* Align items in the container */
+  align-items: center;
+}
+
