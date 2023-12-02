@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // pages & components
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
+import Articles from './pages/Articles';
+import { ArticlesContextProvider } from './context/ArticlesContext';
+
 
 function App() {
 
@@ -15,6 +18,14 @@ function App() {
             <Route 
               path="/" 
               element={<Home />} 
+            />
+            <Route        
+              path="/articles" 
+              element={
+                <ArticlesContextProvider>
+                  <Articles />
+                </ArticlesContextProvider>
+              } 
             />
           </Routes>
         </div>

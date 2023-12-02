@@ -34,6 +34,22 @@ const getArticle = async (req, res) => {
 const createArticle = async (req, res) => {
   const { title, body, author } = req.body;
 
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push('title');
+  }
+  if (!body) {
+    emptyFields.push('body');
+  }
+  if (!author) {
+    emptyFields.push('author');
+  }
+
+  if (emptyFields.length > 0) {
+    return res.status(400).json({ error: 'Please fill in all fields', emptyFields });
+  }
+
   try {
     const article = await Article.create({ title, body, author });
     res.status(200).json(article);
