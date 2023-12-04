@@ -1,16 +1,27 @@
 import { useState } from 'react';
 import { useArticlesContext } from '../hooks/useArticlesContext';
+import { useAuthContext } from '../hooks/useAuthContext'
 
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const ArticleDetails = ({ article }) => {
   const { dispatch } = useArticlesContext();
+  const { user } = useAuthContext()
+
   const [showConfirm, setShowConfirm] = useState(false);
 
   const handleDelete = async () => {
+
+    if (!user) {
+      return
+    }
+
     const response = await fetch(`/api/articles/${article._id}`, {
       method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${user.token}`
+      }
     });
 
     if (response.ok) {

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useArticlesContext } from '../hooks/useArticlesContext';
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const ArticleForm = () => {
   const { dispatch } = useArticlesContext();
+  const { user } = useAuthContext()
 
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
@@ -13,13 +15,19 @@ const ArticleForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!user) {
+      setError('You must be logged in')
+      return
+    }
+
     const article = { title, body, author };
 
     const response = await fetch('/api/articles', {
       method: 'POST',
       body: JSON.stringify(article),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${user.token}`
       }
     });
 
