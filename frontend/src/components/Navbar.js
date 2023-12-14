@@ -20,6 +20,7 @@ const Navbar = () => {
           {user && (
             <div>
               <Link to="/articles" className="nav-item">Articles</Link>
+              <Link to="/doctor" className="nav-item">Doctors</Link>
               <span>{user.email}</span>
               <button onClick={handleClick}>Log out</button>
               

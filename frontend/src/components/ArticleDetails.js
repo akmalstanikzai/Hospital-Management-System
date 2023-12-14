@@ -16,7 +16,7 @@ const ArticleDetails = ({ article }) => {
     if (!user) {
       return
     }
-
+      
     const response = await fetch(`/api/articles/${article._id}`, {
       method: 'DELETE',
       headers: {

@@ -34,7 +34,7 @@ const getDoctor = async (req, res) => {
 
 // Create a new doctor profile
 const createDoctor = async (req, res) => {
-    const { name, specialty, experience, achievements } = req.body;
+    const { name, specialty, experience, achievements, timing } = req.body;
   
     let emptyFields = [];
   
@@ -50,13 +50,16 @@ const createDoctor = async (req, res) => {
     if (!achievements) {
       emptyFields.push('achievements');
     }
+    if (!timing){
+      emptyFields.push('timing');
+    }
   
     if (emptyFields.length > 0) {
       return res.status(400).json({ error: 'Please fill in all fields', emptyFields });
     }
   
     try {
-      const doctor = await Doctor.create({ name, specialty, experience, achievements });
+      const doctor = await Doctor.create({ name, specialty, experience, achievements, timing });
       res.status(200).json(doctor);
     } catch (error) {
       res.status(400).json({ error: error.message });

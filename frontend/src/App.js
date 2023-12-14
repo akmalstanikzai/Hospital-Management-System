@@ -7,7 +7,9 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Articles from './pages/Articles';
+import Doctor from './pages/Doctors'
 import { ArticlesContextProvider } from './context/ArticlesContext';
+import { DoctorsContextProvider } from './context/DoctorsContext'
 
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <div className="pages">
+          <Routes>
+            
+          </Routes>
           <Routes>
             <Route 
               path="/" 
@@ -33,6 +38,14 @@ function App() {
                   </ArticlesContextProvider>
                 : <Navigate to="/login" />
               } 
+            />
+            <Route
+              path="/doctor" 
+              element={user ?
+                <DoctorsContextProvider>
+                  <Doctor />
+                </DoctorsContextProvider>
+                : <Navigate to="/login" />}
             />
             <Route 
               path="/login" 

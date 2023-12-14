@@ -210,3 +210,66 @@ nav button {
   align-items: center;
 }
 
+/* Styles for DoctorDetails component */
+
+/* Container for doctor details */
+.doctor-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; 
+}
+
+/* Styling for doctor name */
+.doctor-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary); /* Assuming --primary is a custom variable for color */
+}
+
+/* Styling for paragraphs within the doctor details */
+.doctor-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Styling for the span button */
+.doctor-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.doc-det{
+  flex: 1; /* Take remaining space */
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.profile-picture {
+  width: 100px; /* Set a specific width for the profile picture div */
+  height: 100px; /* Set a specific height for the profile picture div */
+  border-radius: 50%; /* Make the div round (assuming it's a circular picture) */
+  background-color: #ccc; /* Add a background color for the profile picture */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Styling for the Material Design icon */
+.profile-picture .material-symbols-outlined {
+  font-size: 100px; /* Set the font-size to fill the div container */
+  color: #fff; /* Set icon color (white in this example) */
+  /* Additional styles for the material symbol outlined (if needed) */
+}

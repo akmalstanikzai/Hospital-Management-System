@@ -18,6 +18,10 @@ const doctorSchema = new Schema({
   achievements: {
     type: String,
     required: true
+  },
+  timing : {
+    type: String,
+    required: true
   }
 }, { timestamps: true });
 
